@@ -2,3 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .container{
+        @apply w-full max-w-6xl  px-4
+    }
+}

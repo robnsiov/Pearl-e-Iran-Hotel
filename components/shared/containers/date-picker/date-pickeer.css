@@ -1,0 +1,32 @@
+.rmdp-container .rmdp-wrapper {
+    border-radius: 0 !important;
+}
+
+.rmdp-container .rmdp-input {
+    border: 0;
+    text-align: center;
+    color: #2095AE;
+}
+
+.rmdp-container .rmdp-input:focus {
+    border: 0;
+    box-shadow: unset;
+}
+
+.rmdp-container .rmdp-week-day {
+    color: #2095AE;
+}
+
+.rmdp-container .rmdp-day span {
+    border-radius: 0;
+}
+
+.rmdp-container .rmdp-day.rmdp-selected span:not(.highlight) {
+    box-shadow: unset;
+    background-color: #2095AE;
+}
+
+.rmdp-day:not(.rmdp-disabled):not(.rmdp-day-hidden) span:hover {
+    background-color: #2095AE !important;
+    opacity: 0.5;
+}
