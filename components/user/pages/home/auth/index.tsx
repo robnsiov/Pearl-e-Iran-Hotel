@@ -2,30 +2,16 @@
 import { Box1 } from "iconsax-react";
 import Image from "next/image";
 import useAuth from "./use";
-import cls from "classnames";
-import { useClickOutside } from "@mantine/hooks";
 import PrimaryButton from "@/components/shared/buttons/primary";
+import Modal from "@/components/shared/modal";
 
 const Auth = () => {
-  const { showModal, closeModal, showForm, forgotPass, setForgotPass } =
-    useAuth();
-  const ref = useClickOutside(closeModal);
+  const { forgotPass, setForgotPass } = useAuth();
 
   return (
     <>
-      <div
-        className={cls(
-          `fixed inset-0 z-40 bg-black/50 backdrop-blur-md transition-all duration-300 flex justify-center items-center`,
-          showModal ? "opacity-100 visible" : "opacity-0 invisible"
-        )}
-      >
-        <div
-          className={cls(
-            `absolute  w-full max-w-3xl flex justify-center p-3 transition-all duration-300`,
-            showForm ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"
-          )}
-          ref={ref}
-        >
+      <Modal>
+        <div className="w-full max-w-3xl flex justify-center p-3">
           <div className="w-1/2 flex justify-center items-center flex-col text-center min-h-full p-6 bg-white lg:w-[320px]">
             <Box1 className="text-primary" size="32" />
             <h3 className="font-extralight clear-left text-zinc-500 mt-4">
@@ -87,7 +73,7 @@ const Auth = () => {
             />
           </div>
         </div>
-      </div>
+      </Modal>
     </>
   );
 };
