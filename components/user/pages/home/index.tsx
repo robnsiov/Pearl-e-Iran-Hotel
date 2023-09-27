@@ -1,3 +1,4 @@
+import Articles from "./articles";
 import Banner from "./banner";
 import Landing from "./landing";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <>
       <Landing />
       <Banner />
+      {/* <Articles /> */}
     </>
   );
 };
