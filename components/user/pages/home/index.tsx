@@ -2,6 +2,7 @@ import Articles from "./articles";
 import Auth from "./auth";
 import Banner from "./banner";
 import Landing from "./landing";
+import Videos from "./videos";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <Landing />
       <Banner />
       <Auth />
+      <Videos />
       {/* <Articles /> */}
     </>
   );
