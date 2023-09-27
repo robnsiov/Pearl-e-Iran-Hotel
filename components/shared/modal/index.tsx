@@ -1,3 +1,4 @@
+"use client";
 import cls from "classnames";
 import useModal from "./use";
 import { useClickOutside } from "@mantine/hooks";
