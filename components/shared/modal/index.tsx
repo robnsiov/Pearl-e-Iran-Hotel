@@ -3,7 +3,7 @@ import cls from "classnames";
 import useModal from "./use";
 import { useClickOutside } from "@mantine/hooks";
 import ModalImpl from "./types";
-const Modal = ({ children, open, setOpen }: ModalImpl) => {
+const Modal = ({ children, open, setOpen, className = "" }: ModalImpl) => {
   const { closeModal, showForm } = useModal({ open, setOpen });
   const ref = useClickOutside(closeModal);
   return (
@@ -16,8 +16,11 @@ const Modal = ({ children, open, setOpen }: ModalImpl) => {
       >
         <div
           className={cls(
-            `absolute transition-all duration-300 w-full`,
-            showForm ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"
+            `absolute transition-all duration-300`,
+            showForm
+              ? "translate-y-0 opacity-100"
+              : "-translate-y-10 opacity-0",
+            className
           )}
           ref={ref}
         >

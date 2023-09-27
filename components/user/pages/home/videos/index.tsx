@@ -10,8 +10,12 @@ const Videos = () => {
     useVideos();
   return (
     <>
-      <Modal open={openModal} setOpen={setOpenModal}>
-        <div className="w-full max-w-3xl flex justify-center items-center mx-auto p-5">
+      <Modal
+        open={openModal}
+        setOpen={setOpenModal}
+        className="w-full max-w-3xl"
+      >
+        <div className="flex justify-center items-center mx-auto p-5">
           <Video poster={activeVideo.poster} src={activeVideo.src} />
         </div>
       </Modal>
