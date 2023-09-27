@@ -1,4 +1,5 @@
 import Articles from "./articles";
+import Auth from "./auth";
 import Banner from "./banner";
 import Landing from "./landing";
 
@@ -7,6 +8,7 @@ const Home = () => {
     <>
       <Landing />
       <Banner />
+      <Auth />
       {/* <Articles /> */}
     </>
   );
