@@ -1,14 +1,18 @@
+"use client";
 import Modal from "@/components/shared/modal";
 import Video from "@/components/shared/video";
 import { Play } from "iconsax-react";
 import Image from "next/image";
+import useVideos from "./use";
 
 const Videos = () => {
+  const { openModal, setOpenModal, activeVideo, handleSetActiveVideo } =
+    useVideos();
   return (
     <>
-      <Modal open={true}>
-        <div className="w-full max-w-xl flex justify-center items-center mx-auto p-5">
-          <Video />
+      <Modal open={openModal} setOpen={setOpenModal}>
+        <div className="w-full max-w-3xl flex justify-center items-center mx-auto p-5">
+          <Video poster={activeVideo.poster} src={activeVideo.src} />
         </div>
       </Modal>
       <div className="container flex justify-between md:flex-wrap items-start py-10">
@@ -16,7 +20,15 @@ const Videos = () => {
           className="w-[calc(50%-15px)] md:w-full md:mb-5
          flex justify-start items-start flex-col cursor-pointer"
         >
-          <div className="w-full aspect-video relative group">
+          <div
+            className="w-full aspect-video relative group"
+            onClick={() =>
+              handleSetActiveVideo(
+                "https://stream.mux.com/VZtzUzGRv02OhRnZCxcNg49OilvolTqdnFLEqBsTwaxU/low.mp4",
+                "/images/1.jpg"
+              )
+            }
+          >
             <div className="absolute inset-0 bg-[#0f2454] opacity-40 z-10"></div>
             <div className="absolute inset-0 flex justify-center items-center z-20">
               <div
@@ -55,7 +67,15 @@ const Videos = () => {
           className="w-[calc(50%-15px)] md:w-full md:mb-5
          flex justify-start items-start flex-col cursor-pointer"
         >
-          <div className="w-full aspect-video relative group">
+          <div
+            className="w-full aspect-video relative group"
+            onClick={() =>
+              handleSetActiveVideo(
+                "https://stream.mux.com/VZtzUzGRv02OhRnZCxcNg49OilvolTqdnFLEqBsTwaxU/low.mp4",
+                "/images/1.jpg"
+              )
+            }
+          >
             <div className="absolute inset-0 bg-[#0f2454] opacity-40 z-10"></div>
             <div className="absolute inset-0 flex justify-center items-center z-20">
               <div
