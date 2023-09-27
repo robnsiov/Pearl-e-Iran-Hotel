@@ -1,9 +1,16 @@
+import Modal from "@/components/shared/modal";
+import Video from "@/components/shared/video";
 import { Play } from "iconsax-react";
 import Image from "next/image";
 
 const Videos = () => {
   return (
     <>
+      <Modal open={true}>
+        <div className="w-full max-w-xl flex justify-center items-center mx-auto p-5">
+          <Video />
+        </div>
+      </Modal>
       <div className="container flex justify-between md:flex-wrap items-start py-10">
         <div
           className="w-[calc(50%-15px)] md:w-full md:mb-5

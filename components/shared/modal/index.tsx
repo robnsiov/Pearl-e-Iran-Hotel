@@ -16,7 +16,7 @@ const Modal = ({ children, open, setOpen }: ModalImpl) => {
       >
         <div
           className={cls(
-            `absolute transition-all duration-300`,
+            `absolute transition-all duration-300 w-full`,
             showForm ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"
           )}
           ref={ref}
