@@ -4,6 +4,7 @@ import { ArrowSquareDown, ArrowSquareUp, SearchNormal1 } from "iconsax-react";
 import useFindNow from "./use";
 import DatePickeer from "@/components/shared/date-picker";
 import cls from "classnames";
+import PrimaryButton from "@/components/shared/buttons/primary";
 const FindNow = () => {
   const {
     people,
@@ -66,12 +67,11 @@ const FindNow = () => {
             />
           </div>
         </div>
-        <div
-          className="w-1/4 md:w-1/2  sm:w-full p-4 flex justify-center items-center bg-primary text-white 
-        cursor-pointer hover:bg-cyan-500 transition-all"
-        >
-          <span className="ml-2">جست و جو</span>
-          <SearchNormal1 size="18" />
+        <div className="w-1/4 md:w-1/2  sm:w-full">
+          <PrimaryButton className="p-4">
+            <span className="ml-2">جست و جو</span>
+            <SearchNormal1 size="18" />
+          </PrimaryButton>
         </div>
       </div>
     </>

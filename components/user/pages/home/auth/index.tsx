@@ -4,6 +4,7 @@ import Image from "next/image";
 import useAuth from "./use";
 import cls from "classnames";
 import { useClickOutside } from "@mantine/hooks";
+import PrimaryButton from "@/components/shared/buttons/primary";
 
 const Auth = () => {
   const { showModal, closeModal, showForm, forgotPass, setForgotPass } =
@@ -49,12 +50,9 @@ const Auth = () => {
                 >
                   بازگشت به صفحه ورود / ثبت نام
                 </div>
-                <button
-                  type="submit"
-                  className="w-full h-[43px] text-white bg-primary mt-6"
-                >
+                <PrimaryButton className="h-[43px] mt-6" type="submit">
                   تایید
-                </button>
+                </PrimaryButton>
               </form>
             ) : (
               <form className="w-full flex justify-center items-center flex-col mt-3">
@@ -72,12 +70,9 @@ const Auth = () => {
                 >
                   رمز عبور خود را فراموش کرده اید ؟
                 </div>
-                <button
-                  type="submit"
-                  className="w-full h-[43px] text-white bg-primary mt-6"
-                >
+                <PrimaryButton className="h-[43px] mt-6" type="submit">
                   تایید
-                </button>
+                </PrimaryButton>
               </form>
             )}
           </div>

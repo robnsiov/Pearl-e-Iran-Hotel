@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useAuth = () => {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [forgotPass, setForgotPass] = useState(false);
 
