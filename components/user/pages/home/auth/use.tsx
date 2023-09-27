@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 const useAuth = () => {
   const [showModal, setShowModal] = useState(true);
   const [showForm, setShowForm] = useState(false);
+  const [forgotPass, setForgotPass] = useState(false);
 
   useEffect(() => {
     let timeOut: NodeJS.Timeout;
@@ -23,7 +24,7 @@ const useAuth = () => {
     }, 100);
   };
 
-  return { closeModal, showModal, showForm };
+  return { closeModal, showModal, showForm, forgotPass, setForgotPass };
 };
 
 export default useAuth;

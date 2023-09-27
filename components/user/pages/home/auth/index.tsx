@@ -6,7 +6,8 @@ import cls from "classnames";
 import { useClickOutside } from "@mantine/hooks";
 
 const Auth = () => {
-  const { showModal, closeModal, showForm } = useAuth();
+  const { showModal, closeModal, showForm, forgotPass, setForgotPass } =
+    useAuth();
   const ref = useClickOutside(closeModal);
 
   return (
@@ -27,24 +28,58 @@ const Auth = () => {
           <div className="w-1/2 flex justify-center items-center flex-col text-center min-h-full p-6 bg-white lg:w-[320px]">
             <Box1 className="text-primary" size="32" />
             <h3 className="font-extralight clear-left text-zinc-500 mt-4">
-              ورود <span>/</span> ثبت نام
+              {forgotPass ? (
+                "فراموشی رمز عبور"
+              ) : (
+                <>
+                  ورود <span>/</span> ثبت نام
+                </>
+              )}
             </h3>
-            <form className="w-full flex justify-center items-center flex-col mt-3">
-              <label className="w-full flex justify-start items-start flex-col">
-                <span className="mb-1 cursor-pointer">ایمیل</span>
-                <input className="w-full p-2 border-2 outline-0 border-zinc-200 text-primary focus:border-zinc-300" />
-              </label>
-              <label className="w-full flex justify-start items-start flex-col mt-3">
-                <span className="mb-1 cursor-pointer">رمز عبور</span>
-                <input className="w-full p-2 border-2 outline-0 border-zinc-200 text-primary focus:border-zinc-300" />
-              </label>
-              <button
-                type="submit"
-                className="w-full h-[43px] text-white bg-primary mt-6"
-              >
-                تایید
-              </button>
-            </form>
+
+            {forgotPass ? (
+              <form className="w-full flex justify-center items-center flex-col mt-3">
+                <label className="w-full flex justify-start items-start flex-col">
+                  <span className="mb-1 cursor-pointer">ایمیل</span>
+                  <input className="w-full p-2 border-2 outline-0 border-zinc-200 text-primary focus:border-zinc-300" />
+                </label>
+                <div
+                  onClick={() => setForgotPass(false)}
+                  className="text-primary w-full text-sm text-right mt-3 cursor-pointer hover:underline underline-offset-1"
+                >
+                  بازگشت به صفحه ورود / ثبت نام
+                </div>
+                <button
+                  type="submit"
+                  className="w-full h-[43px] text-white bg-primary mt-6"
+                >
+                  تایید
+                </button>
+              </form>
+            ) : (
+              <form className="w-full flex justify-center items-center flex-col mt-3">
+                <label className="w-full flex justify-start items-start flex-col">
+                  <span className="mb-1 cursor-pointer">ایمیل</span>
+                  <input className="w-full p-2 border-2 outline-0 border-zinc-200 text-primary focus:border-zinc-300" />
+                </label>
+                <label className="w-full flex justify-start items-start flex-col mt-3">
+                  <span className="mb-1 cursor-pointer">رمز عبور</span>
+                  <input className="w-full p-2 border-2 outline-0 border-zinc-200 text-primary focus:border-zinc-300" />
+                </label>
+                <div
+                  onClick={() => setForgotPass(true)}
+                  className="text-primary w-full text-sm text-right mt-3 cursor-pointer hover:underline underline-offset-1"
+                >
+                  رمز عبور خود را فراموش کرده اید ؟
+                </div>
+                <button
+                  type="submit"
+                  className="w-full h-[43px] text-white bg-primary mt-6"
+                >
+                  تایید
+                </button>
+              </form>
+            )}
           </div>
           <div className="w-1/2 h-[500px] relative lg:hidden">
             <div className="absolute inset-0 bg-[#0f2454] opacity-40"></div>
