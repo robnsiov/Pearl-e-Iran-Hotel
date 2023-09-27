@@ -2,7 +2,7 @@
 
 import { ArrowSquareDown, ArrowSquareUp, SearchNormal1 } from "iconsax-react";
 import useFindNow from "./use";
-import DatePickeer from "@/components/shared/containers/date-picker";
+import DatePickeer from "@/components/shared/date-picker";
 import cls from "classnames";
 const FindNow = () => {
   const {
