@@ -16,8 +16,10 @@
     "iconsax-react": "^0.0.8",
     "next": "latest",
     "react": "latest",
+    "react-countup": "^6.4.2",
     "react-dom": "latest",
     "react-multi-date-picker": "^4.3.1",
+    "react-visibility-sensor": "^5.1.1",
     "vidstack": "^0.6.13"
   },
   "devDependencies": {
