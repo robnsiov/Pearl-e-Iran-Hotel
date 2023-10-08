@@ -1,3 +1,4 @@
+import AboutUs from "./about-us";
 import Articles from "./articles";
 import Auth from "./auth";
 import Banner from "./banner";
@@ -9,6 +10,7 @@ const Home = () => {
   return (
     <>
       <Landing />
+      <AboutUs />
       <Banner />
       {/* <Auth /> */}
       <Videos />
