@@ -2,6 +2,7 @@ import AboutUs from "./about-us";
 import Articles from "./articles";
 import Auth from "./auth";
 import Banner from "./banner";
+import Footer from "./footer";
 import Landing from "./landing";
 import Stats from "./stats";
 import Videos from "./videos";
@@ -9,12 +10,13 @@ import Videos from "./videos";
 const Home = () => {
   return (
     <>
-      <Landing />
+      <Footer />
+      {/* <Landing />
       <AboutUs />
-      <Banner />
+      <Banner /> */}
       {/* <Auth /> */}
-      <Videos />
-      <Stats />
+      {/* <Videos />
+      <Stats /> */}
       {/* <Articles /> */}
     </>
   );
