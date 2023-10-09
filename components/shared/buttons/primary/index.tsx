@@ -1,3 +1,4 @@
+"use client";
 import PrimaryButtonImpl from "./types";
 import cls from "classnames";
 
