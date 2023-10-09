@@ -149,7 +149,7 @@ const Footer = () => {
               <div className="mt-5 w-full relative">
                 <input
                   placeholder="ایمیل خود را وارد کنید"
-                  className="w-full p-4 pl-[120px] text-zinc-500 bg-white outline-none md:py-0 md:h-[40px] md:leading-[40px]"
+                  className="w-full p-4 pl-[120px] text-zinc-500 bg-white outline-none md:py-0 md:h-[40px] md:leading-[40px] md:pl-4"
                 />
                 <div className="absolute left-1.5 bottom-1.5 top-1.5 w-[100px] md:relative md:inset-auto md:w-full md:h-[40px]">
                   <PrimaryButton className="h-full" type="submit">
