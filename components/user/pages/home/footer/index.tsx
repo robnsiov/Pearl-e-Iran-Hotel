@@ -159,6 +159,10 @@ const Footer = () => {
               </div>
             </div>
           </div>
+          <span className="w-full mt-10 border-t-[1px] border-white/10 inline-block"></span>
+          <span className="mt-6 inline-block text-zinc-300">
+            تمام حقوق محفوظ است
+          </span>
         </div>
       </div>
     </>
