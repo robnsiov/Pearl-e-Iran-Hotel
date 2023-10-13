@@ -8,13 +8,15 @@ import Landing from "./landing";
 import PopularFoods from "./popular-foods";
 import PopularRooms from "./popular-rooms";
 import Stats from "./stats";
+import Testimonials from "./testmonials";
 import Videos from "./videos";
 
 const Home = () => {
   return (
     <>
+      <Testimonials />
       {/* <PopularFoods /> */}
-      <InfoBox />
+      {/* <InfoBox /> */}
       {/* <PopularRooms /> */}
       {/* <Landing /> */}
       {/* <AboutUs /> */}
