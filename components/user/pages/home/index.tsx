@@ -3,6 +3,7 @@ import Articles from "./articles";
 import Auth from "./auth";
 import Banner from "./banner";
 import Footer from "./footer";
+import InfoBox from "./info-box";
 import Landing from "./landing";
 import PopularFoods from "./popular-foods";
 import PopularRooms from "./popular-rooms";
@@ -12,7 +13,8 @@ import Videos from "./videos";
 const Home = () => {
   return (
     <>
-      <PopularFoods />
+      {/* <PopularFoods /> */}
+      <InfoBox />
       {/* <PopularRooms /> */}
       {/* <Landing /> */}
       {/* <AboutUs /> */}
