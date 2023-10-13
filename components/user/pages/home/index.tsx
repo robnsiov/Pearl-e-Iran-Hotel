@@ -11,14 +11,14 @@ import Videos from "./videos";
 const Home = () => {
   return (
     <>
-      <PopularRooms />
+      {/* <PopularRooms /> */}
       {/* <Landing /> */}
       {/* <AboutUs /> */}
       {/* <Banner /> */}
       {/* <Auth /> */}
       {/* <Videos />
       <Stats /> */}
-      {/* <Articles /> */}
+      <Articles />
       {/* <Footer /> */}
     </>
   );
