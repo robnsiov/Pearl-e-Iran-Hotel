@@ -12,9 +12,9 @@ const Home = () => {
   return (
     <>
       <PopularRooms />
-      {/* <Landing />
-      <AboutUs />
-    <Banner /> */}
+      {/* <Landing /> */}
+      {/* <AboutUs /> */}
+      {/* <Banner /> */}
       {/* <Auth /> */}
       {/* <Videos />
       <Stats /> */}

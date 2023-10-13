@@ -5,8 +5,14 @@ import cls from "classnames";
 const PopularRooms = () => {
   return (
     <>
-      <div className="w-full bg-zinc-200">
-        <div className="container flex justify-start items-start flex-col py-10">
+      <div className="w-full bg-zinc-100">
+        <div className="container flex justify-start items-start flex-col py-24 md:py-7">
+          <span className="text-primary font-light text-sm mb-2">
+            لورم ایپسوم متن ساختگی با تولید سادگی
+          </span>
+          <h2 className="text-blue-950 font-extrabold text-5xl md:text-4xl mb-6 leading-[1.4]">
+            اتاق های <span className="text-primary">لوکس</span>
+          </h2>
           <div className="w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-6">
             {Array(5)
               .fill("")
