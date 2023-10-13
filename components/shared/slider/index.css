@@ -1,0 +1,11 @@
+.splide__pagination{
+    bottom: -10%;
+}
+@media (max-width:767px) {
+    .splide__pagination {
+        bottom: -6%;
+    }
+}
+.splide__pagination__page.is-active {
+    background-color: #2095AE !important;
+}
