@@ -1,9 +1,9 @@
 .splide__pagination{
-    bottom: -10%;
+    bottom: -50px !important;
 }
 @media (max-width:767px) {
     .splide__pagination {
-        bottom: -6%;
+        bottom: -40px !important;
     }
 }
 .splide__pagination__page.is-active {

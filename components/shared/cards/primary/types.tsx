@@ -3,4 +3,6 @@ export default interface PrimaryCardImpl {
   title: React.ReactNode;
   label: React.ReactNode;
   image: string;
+  layer?: boolean;
+  active?: boolean;
 }

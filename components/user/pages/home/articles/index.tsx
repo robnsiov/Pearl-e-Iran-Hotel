@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 // @ts-ignore
 import { SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
 import Slider from "@/components/shared/slider";
 
 const Articles = () => {

@@ -2,6 +2,7 @@
 "use client";
 
 import "./index.css";
+import "@splidejs/react-splide/css";
 import { useRef } from "react";
 import { Splide, SplideTrack } from "@splidejs/react-splide";
 import { ArrowLeft3, ArrowRight3 } from "iconsax-react";

@@ -4,6 +4,7 @@ import Auth from "./auth";
 import Banner from "./banner";
 import Footer from "./footer";
 import Landing from "./landing";
+import PopularFoods from "./popular-foods";
 import PopularRooms from "./popular-rooms";
 import Stats from "./stats";
 import Videos from "./videos";
@@ -11,6 +12,7 @@ import Videos from "./videos";
 const Home = () => {
   return (
     <>
+      <PopularFoods />
       {/* <PopularRooms /> */}
       {/* <Landing /> */}
       {/* <AboutUs /> */}
@@ -18,7 +20,7 @@ const Home = () => {
       {/* <Auth /> */}
       {/* <Videos />
       <Stats /> */}
-      <Articles />
+      {/* <Articles /> */}
       {/* <Footer /> */}
     </>
   );

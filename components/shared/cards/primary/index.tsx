@@ -1,8 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import PrimaryCardImpl from "./types";
+import cls from "classnames";
 
-const PrimaryCard = ({ children, image, label, title }: PrimaryCardImpl) => {
+const PrimaryCard = ({
+  children,
+  image,
+  label,
+  title,
+  layer = false,
+  active = false,
+}: PrimaryCardImpl) => {
   return (
     <>
       <Link
@@ -13,25 +21,37 @@ const PrimaryCard = ({ children, image, label, title }: PrimaryCardImpl) => {
           {label}
         </span>
         <div
-          className="absolute inset-0 bg-[#0f2454] opacity-10 
-        transition-all duration-700 group-hover:opacity-40 z-10"
+          className={cls(
+            `absolute inset-0 bg-[#0f2454] opacity-10 
+        transition-all duration-700 group-hover:opacity-40 z-10`,
+            { "opacity-40": active }
+          )}
         ></div>
         <div
-          className="relative w-full z-20 flex justify-start items-start flex-col p-8 pb-4 text-white
-        translate-y-[45px] group-hover:translate-y-[0px] duration-500 transition-all"
+          className={cls(
+            `relative w-full z-20 flex justify-start items-start flex-col px-8 pb-4 pt-4 text-white
+        translate-y-[45px] group-hover:translate-y-[0px] duration-500 transition-all`,
+            { "bg-primary": layer, "translate-y-[0px]": active }
+          )}
         >
           <h4 className="font-bold text-2xl mb-3">{title}</h4>
           <span
-            className="w-[50px] inline-block h-[1px] border-b-[1px] border-white/40 mb-6
-          group-hover:w-full duration-1000 transition-all"
+            className={cls(
+              `w-[50px] inline-block h-[1px] border-b-[1px] border-white/40 mb-6
+          group-hover:w-full duration-1000 transition-all`,
+              { "w-full": active }
+            )}
           ></span>
           {children}
         </div>
         <Image
           src={image}
           alt="landing"
-          className="absolute inset-0 w-full h-full object-cover 
-          object-center group-hover:scale-110 duration-700 transition-all"
+          className={cls(
+            `absolute inset-0 w-full h-full object-cover 
+          object-center group-hover:scale-110 duration-700 transition-all`,
+            { "scale-110": active }
+          )}
           width={1500}
           height={800}
         />
