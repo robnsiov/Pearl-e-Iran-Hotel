@@ -1,3 +1,4 @@
+import PrimaryCard from "@/components/shared/cards/primary";
 import AboutUs from "./about-us";
 import Articles from "./articles";
 import Auth from "./auth";
@@ -10,14 +11,15 @@ import Videos from "./videos";
 const Home = () => {
   return (
     <>
-      <Footer />
+      <PrimaryCard />
       {/* <Landing />
       <AboutUs />
-      <Banner /> */}
+    <Banner /> */}
       {/* <Auth /> */}
       {/* <Videos />
       <Stats /> */}
       {/* <Articles /> */}
+      {/* <Footer /> */}
     </>
   );
 };
