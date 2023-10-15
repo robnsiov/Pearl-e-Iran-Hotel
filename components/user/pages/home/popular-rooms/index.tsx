@@ -5,7 +5,7 @@ import cls from "classnames";
 const PopularRooms = () => {
   return (
     <>
-      <div className="w-full bg-zinc-100">
+      <div className="w-full ">
         <div className="container flex justify-start items-start flex-col py-24 md:py-7">
           <span className="text-primary font-light text-sm mb-2">
             لورم ایپسوم متن ساختگی با تولید سادگی

@@ -106,7 +106,7 @@ const Testimonials = () => {
           height={800}
         />
       </div>
-      <div className="w-full bg-zinc-100 py-4">
+      <div className="w-full  py-4">
         <div className="container flex justify-start items-center relative">
           <div
             className="w-[450px] bg-white flex justify-center items-start flex-col p-[40px]

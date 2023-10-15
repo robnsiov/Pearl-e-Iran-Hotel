@@ -19,7 +19,7 @@ const Videos = () => {
           <Video poster={activeVideo.poster} src={activeVideo.src} />
         </div>
       </Modal>
-      <div className="w-full bg-zinc-100">
+      <div className="w-full ">
         <div className="container flex justify-between md:flex-wrap items-start py-16">
           <div
             className="w-[calc(50%-15px)] md:w-full md:mb-5

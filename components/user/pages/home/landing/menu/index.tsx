@@ -23,8 +23,10 @@ const Menu = () => {
     <>
       <div
         className={cls(
-          `inset-0 bottom-auto flex items-center justify-center z-[999] transition-all box-border border-b-[1px] border-transparent`,
-          showStickyMenu ? "fixed bg-white border-black/10" : "absolute"
+          `inset-0 bottom-auto flex items-center justify-center z-[999] transition-all box-border border-b-[1px]`,
+          showStickyMenu
+            ? "fixed bg-white border-black/10"
+            : "absolute border-transparent"
         )}
       >
         <div className="container md:!px-0 relative">

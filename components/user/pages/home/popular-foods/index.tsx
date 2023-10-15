@@ -7,7 +7,7 @@ import { ArrowLeft } from "iconsax-react";
 const PopularFoods = () => {
   return (
     <>
-      <div className="w-full bg-zinc-100">
+      <div className="w-full ">
         <div className="container flex justify-start items-start flex-col py-10 pb-20 md:pb-16">
           <span className="text-primary font-light text-sm mb-2">
             لورم ایپسوم متن ساختگی با تولید سادگی

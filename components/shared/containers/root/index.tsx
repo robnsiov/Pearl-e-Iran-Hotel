@@ -6,10 +6,12 @@ import Menu from "@/components/user/pages/home/landing/menu";
 const RootContainer = ({ children }: RootContainerImpl) => {
   return (
     <>
-      <Menu />
-      {children}
-      <Testimonials />
-      <Footer />
+      <div className="bg-zinc-100">
+        <Menu />
+        {children}
+        <Testimonials />
+        <Footer />
+      </div>
     </>
   );
 };
