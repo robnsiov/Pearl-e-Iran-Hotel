@@ -13,6 +13,7 @@ const config: Config = {
       lg: { max: "1023px" },
       md: { max: "767px" },
       sm: { max: "639px" },
+      "520px": { max: "520px" },
     },
     extend: {
       backgroundImage: {
