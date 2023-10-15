@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 
 import { Inter } from "next/font/google";
+import RootContainer from "@/components/shared/containers/root";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -73,7 +74,7 @@ export default function RootLayout({
   return (
     <html lang="en" dir="rtl">
       <body className={`${inter.variable} ${yekanBakh.className}`}>
-        {children}
+        <RootContainer>{children}</RootContainer>
       </body>
     </html>
   );
