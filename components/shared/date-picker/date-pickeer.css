@@ -5,7 +5,7 @@
 .rmdp-container .rmdp-input {
     border: 0;
     text-align: center;
-    color: #2095AE;
+    color: var(--primary);
 }
 
 .rmdp-container .rmdp-input:focus {
@@ -14,7 +14,7 @@
 }
 
 .rmdp-container .rmdp-week-day {
-    color: #2095AE;
+    color: var(--primary);
 }
 
 .rmdp-container .rmdp-day span {
@@ -23,10 +23,10 @@
 
 .rmdp-container .rmdp-day.rmdp-selected span:not(.highlight) {
     box-shadow: unset;
-    background-color: #2095AE;
+    background-color: var(--primary);
 }
 
 .rmdp-day:not(.rmdp-disabled):not(.rmdp-day-hidden) span:hover {
-    background-color: #2095AE !important;
+    background-color: var(--primary) !important;
     opacity: 0.5;
 }

@@ -22,7 +22,7 @@ const PrimaryCard = ({
         </span>
         <div
           className={cls(
-            `absolute inset-0 bg-[#0f2454] opacity-10 
+            `absolute inset-0 bg-blue-950 opacity-10 
         transition-all duration-700 group-hover:opacity-40 z-10`,
             { "opacity-40": active }
           )}

@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <>
       <div className="w-full flex justify-center items-center h-[500px] md:h-[300px] relative">
-        <div className="absolute inset-0 bg-[#0f2454] opacity-40 z-10"></div>
+        <div className="absolute inset-0 bg-blue-950 opacity-40 z-10"></div>
         <div className="absolute inset-0">
           <video
             className="w-full h-full object-cover"

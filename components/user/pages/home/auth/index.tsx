@@ -63,7 +63,7 @@ const Auth = () => {
             )}
           </div>
           <div className="w-1/2 h-[500px] relative lg:hidden">
-            <div className="absolute inset-0 bg-[#0f2454] opacity-40"></div>
+            <div className="absolute inset-0 bg-blue-950 opacity-40"></div>
             <Image
               src={"/images/1.jpg"}
               alt="landing"

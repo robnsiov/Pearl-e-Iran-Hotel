@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+    --primary: #2095AE;
+    --secondary: secondary;
+}
+
 @layer components {
     .container{
         @apply mx-auto w-full max-w-6xl  px-4

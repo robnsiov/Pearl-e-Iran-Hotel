@@ -23,30 +23,22 @@ const Menu = () => {
     <>
       <div
         className={cls(
-          `inset-0 bottom-auto flex items-center justify-center z-20 transition-all box-border`,
-          showStickyMenu ? "fixed bg-white" : "absolute"
+          `inset-0 bottom-auto flex items-center justify-center z-[999] transition-all box-border border-b-[1px] border-transparent`,
+          showStickyMenu ? "fixed bg-white border-black/10" : "absolute"
         )}
       >
         <div className="container md:!px-0 relative">
           <div
             style={{
-              height: toggleMenu ? 4 * 36 + 24.8 + "px" : "0px",
+              height: toggleMenu ? 4 * 28.3 + 4 * 8 + 8 + "px" : "0px",
             }}
-            className="hidden md:flex justify-start items-start flex-col text-lg absolute inset-x-0 
-          top-full bg-white border-t-[1px] border-zinc-200 overflow-hidden transition-all duration-300 ease-in-out"
+            className="hidden md:flex justify-between items-start flex-col text-lg absolute inset-x-0 
+          top-full bg-white border-t-[1px] border-zinc-200 overflow-hidden transition-all duration-300 ease-in-out
+          "
           >
             <Link
               className={cls(
-                `mr-3 py-1`,
-                showStickyMenu ? "text-slate-600" : "text-zinc-500 pt-3"
-              )}
-              href={"/"}
-            >
-              خانه
-            </Link>
-            <Link
-              className={cls(
-                `mr-3 py-1`,
+                `mr-3  mb-1 mt-2`,
                 showStickyMenu ? "text-slate-600" : "text-zinc-500"
               )}
               href={"/"}
@@ -55,7 +47,7 @@ const Menu = () => {
             </Link>
             <Link
               className={cls(
-                `mr-3 py-1`,
+                `mr-3  my-1`,
                 showStickyMenu ? "text-slate-600" : "text-zinc-500"
               )}
               href={"/"}
@@ -64,8 +56,17 @@ const Menu = () => {
             </Link>
             <Link
               className={cls(
-                `mr-3 py-1`,
-                showStickyMenu ? "text-slate-600" : "text-zinc-500 pb-3"
+                `mr-3  my-1`,
+                showStickyMenu ? "text-slate-600" : "text-zinc-500"
+              )}
+              href={"/"}
+            >
+              خانه
+            </Link>
+            <Link
+              className={cls(
+                `pr-3  pt-1 pb-2 border-b-[1px] border-black/10 w-full`,
+                showStickyMenu ? "text-slate-600" : "text-zinc-500"
               )}
               href={"/"}
             >
@@ -99,7 +100,9 @@ const Menu = () => {
               <Link
                 className={cls(
                   `mr-5`,
-                  showStickyMenu ? "text-slate-600" : "text-white"
+                  showStickyMenu
+                    ? "text-slate-600 hover:text-primary"
+                    : "text-white hover:text-zinc-300"
                 )}
                 href={"/"}
               >
@@ -108,7 +111,9 @@ const Menu = () => {
               <Link
                 className={cls(
                   `mr-5`,
-                  showStickyMenu ? "text-slate-600" : "text-white"
+                  showStickyMenu
+                    ? "text-slate-600 hover:text-primary"
+                    : "text-white hover:text-zinc-300"
                 )}
                 href={"/"}
               >
@@ -117,7 +122,9 @@ const Menu = () => {
               <Link
                 className={cls(
                   `mr-5`,
-                  showStickyMenu ? "text-slate-600" : "text-white"
+                  showStickyMenu
+                    ? "text-slate-600 hover:text-primary"
+                    : "text-white hover:text-zinc-300"
                 )}
                 href={"/"}
               >
@@ -126,7 +133,9 @@ const Menu = () => {
               <Link
                 className={cls(
                   `mr-5`,
-                  showStickyMenu ? "text-slate-600" : "text-white"
+                  showStickyMenu
+                    ? "text-slate-600 hover:text-primary"
+                    : "text-white hover:text-zinc-300"
                 )}
                 href={"/"}
               >
@@ -135,7 +144,9 @@ const Menu = () => {
               <Link
                 className={cls(
                   `mr-5`,
-                  showStickyMenu ? "text-slate-600" : "text-white"
+                  showStickyMenu
+                    ? "text-slate-600 hover:text-primary"
+                    : "text-white hover:text-zinc-300"
                 )}
                 href={"/"}
               >

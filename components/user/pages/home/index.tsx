@@ -14,18 +14,18 @@ import Videos from "./videos";
 const Home = () => {
   return (
     <>
-      <Testimonials />
-      {/* <PopularFoods /> */}
-      {/* <InfoBox /> */}
-      {/* <PopularRooms /> */}
-      {/* <Landing /> */}
-      {/* <AboutUs /> */}
-      {/* <Banner /> */}
+      <Landing />
+      <AboutUs />
+      <PopularRooms />
+      <Stats />
+      <PopularFoods />
+      <Banner />
+      <InfoBox />
+      <Articles />
+      <Videos />
       {/* <Auth /> */}
-      {/* <Videos />
-      <Stats /> */}
-      {/* <Articles /> */}
-      {/* <Footer /> */}
+      <Testimonials />
+      <Footer />
     </>
   );
 };

@@ -6,9 +6,9 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <div className="w-full bg-blue-950 py-10">
-        <div className="container">
-          <div className="flex justify-center items-center border-[1px] p-5 md:p-0 border-white/10 md:flex-col">
+      <div className="w-full bg-blue-950 py-10 pb-0">
+        <div className="container flex justify-center items-start flex-col">
+          <div className="w-full flex justify-center items-center border-[1px] p-5 md:p-0 border-white/10 md:flex-col">
             <Link
               href={"/"}
               className="flex justify-center items-center w-1/3 border-l-[1px] border-white/10
@@ -160,7 +160,7 @@ const Footer = () => {
             </div>
           </div>
           <span className="w-full mt-10 border-t-[1px] border-white/10 inline-block"></span>
-          <span className="mt-6 inline-block text-zinc-300">
+          <span className="my-6 inline-block text-zinc-300">
             تمام حقوق محفوظ است
           </span>
         </div>

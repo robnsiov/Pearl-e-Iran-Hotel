@@ -6,7 +6,7 @@ import Details from "./details";
 const Landing = () => {
   return (
     <>
-      <div className="w-full h-screen relative">
+      <div className="w-full h-screen relative z-50">
         <Menu />
         <Cover />
         <Details />

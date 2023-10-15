@@ -81,7 +81,7 @@ const Stats = () => {
             </div>
           ))}
         </div>
-        <div className="absolute inset-0 bg-[#0f2454] opacity-60 z-10"></div>
+        <div className="absolute inset-0 bg-blue-950 opacity-60 z-10"></div>
         <Image
           src={"/images/15.jpg"}
           alt="landing"
