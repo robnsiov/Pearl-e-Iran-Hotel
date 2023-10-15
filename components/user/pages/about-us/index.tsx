@@ -1,6 +1,7 @@
 import Image from "next/image";
 import AboutUsBanner from "../home/about-us";
 import PrimaryButton from "@/components/shared/buttons/primary";
+import TextInput from "@/components/shared/input/text-input";
 
 const AboutUs = () => {
   return (
@@ -28,30 +29,19 @@ const AboutUs = () => {
       </div>
       <AboutUsBanner />
       <div className="container mb-14 flex justify-between items-center flex-wrap">
-        <label className="w-[calc(33.33%-10px)]">
-          <input
-            placeholder="ایمیل"
-            className="outline-none w-full border-[1px] border-primary p-4 text-zinc-600 caret-primary"
-          />
-        </label>
-        <label className="w-[calc(33.33%-10px)]">
-          <input
-            placeholder="ایمیل"
-            className="outline-none w-full border-[1px] border-primary p-4 text-zinc-600 caret-primary"
-          />
-        </label>
-        <label className="w-[calc(33.33%-10px)]">
-          <input
-            placeholder="ایمیل"
-            className="outline-none w-full border-[1px] border-primary p-4 text-zinc-600 caret-primary"
-          />
-        </label>
-        <textarea
-          className="outline-none w-full border-[1px] border-primary mt-[20px]
-         p-4 text-zinc-600 caret-primary resize-none"
-          rows={7}
-        />
-        <div className="w-full flex justify-end items-center mt-[20px]">
+        <div className="w-[calc(33.33%-10px)] md:w-[calc(50%-10px)] sm:w-full">
+          <TextInput placeholder="موضوع" />
+        </div>
+        <div className="w-[calc(33.33%-10px)] md:w-[calc(50%-10px)] sm:w-full my-2">
+          <TextInput placeholder="نام" />
+        </div>
+        <div className="w-[calc(33.33%-10px)] md:w-full md:mt-5 sm:mt-0">
+          <TextInput placeholder="شماره همراه" />
+        </div>
+        <div className="w-full mt-[20px] sm:mt-2 mb-0">
+          <TextInput placeholder="پیام" textarea={true} />
+        </div>
+        <div className="w-full flex justify-end items-center mt-5 sm:mt-0">
           <div className="w-[200px]">
             <PrimaryButton className="py-3">ارسال</PrimaryButton>
           </div>
