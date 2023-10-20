@@ -1,4 +1,10 @@
-const Dashboard = () => {
-  return <></>;
+import Dashboard from "@/components/user/pages/dashboard";
+
+const Page = () => {
+  return (
+    <>
+      <Dashboard />
+    </>
+  );
 };
-export default Dashboard;
+export default Page;
