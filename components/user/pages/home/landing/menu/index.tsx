@@ -5,6 +5,33 @@ import cls from "classnames";
 import { HambergerMenu } from "iconsax-react";
 import useMenu from "./use";
 
+const links = [
+  {
+    name: "خانه",
+    href: "/",
+  },
+  {
+    name: "اتاق ها",
+    href: "/rooms",
+  },
+  {
+    name: "رستوران",
+    href: "/resturant",
+  },
+  {
+    name: "کافی شاپ",
+    href: "/coffee-shop",
+  },
+  {
+    name: "مقالات",
+    href: "/blogs",
+  },
+  {
+    name: "درباره ما",
+    href: "/about-us",
+  },
+];
+
 const Menu = () => {
   const { setToggleMenu, showStickyMenu, toggleMenu, dashboardPage } =
     useMenu();
@@ -22,57 +49,33 @@ const Menu = () => {
         <div className="container md:!px-0 relative">
           <div
             style={{
-              height: toggleMenu ? 4 * 28.3 + 4 * 8 + 8 + "px" : "0px",
+              height: toggleMenu
+                ? links.length * 28.3 + links.length * 8 + 8 + "px"
+                : "0px",
             }}
             className="hidden md:flex justify-between items-start flex-col text-lg absolute inset-x-0 
           top-full bg-white border-t-[1px] border-zinc-200 overflow-hidden transition-all duration-300 ease-in-out
           "
           >
-            <Link
-              className={cls(
-                `mr-3  mb-1 mt-2`,
-                showStickyMenu ? "text-slate-600" : "text-zinc-500"
-              )}
-              href={"/"}
-            >
-              خانه
-            </Link>
-            <Link
-              className={cls(
-                `mr-3  my-1`,
-                showStickyMenu ? "text-slate-600" : "text-zinc-500"
-              )}
-              href={"/"}
-            >
-              خانه
-            </Link>
-            <Link
-              className={cls(
-                `mr-3  my-1`,
-                showStickyMenu ? "text-slate-600" : "text-zinc-500"
-              )}
-              href={"/"}
-            >
-              خانه
-            </Link>
-            <Link
-              className={cls(
-                `pr-3  pt-1 pb-2 border-b-[1px] border-black/10 w-full`,
-                showStickyMenu ? "text-slate-600" : "text-zinc-500"
-              )}
-              href={"/"}
-            >
-              خانه
-            </Link>
-            <Link
-              className={cls(
-                `pr-3  pt-1 pb-2 border-b-[1px] border-black/10 w-full`,
-                showStickyMenu ? "text-slate-600" : "text-zinc-500"
-              )}
-              href={"/"}
-            >
-              خانه
-            </Link>
+            {links.map(({ href, name }, index) => (
+              <Link
+                key={name}
+                className={cls(
+                  {
+                    "pr-3  pt-1 pb-2 border-b-[1px] border-black/10 w-full":
+                      index === links.length - 1,
+                  },
+                  {
+                    "mr-3  mb-1 mt-2": index === 0,
+                  },
+                  { "mr-3  my-1": index !== 0 && index !== links.length - 1 },
+                  showStickyMenu ? "text-slate-600" : "text-zinc-500"
+                )}
+                href={href}
+              >
+                {name}
+              </Link>
+            ))}
           </div>
           <div
             className="flex justify-between
@@ -98,61 +101,20 @@ const Menu = () => {
               )}
             />
             <div className="flex justify-center items-center  md:hidden">
-              <Link
-                className={cls(
-                  `mr-5`,
-                  showStickyMenu
-                    ? "text-slate-600 hover:text-primary"
-                    : "text-white hover:text-zinc-300"
-                )}
-                href={"/"}
-              >
-                خانه
-              </Link>
-              <Link
-                className={cls(
-                  `mr-5`,
-                  showStickyMenu
-                    ? "text-slate-600 hover:text-primary"
-                    : "text-white hover:text-zinc-300"
-                )}
-                href={"/"}
-              >
-                اتاق ها
-              </Link>
-              <Link
-                className={cls(
-                  `mr-5`,
-                  showStickyMenu
-                    ? "text-slate-600 hover:text-primary"
-                    : "text-white hover:text-zinc-300"
-                )}
-                href={"/"}
-              >
-                رستوران
-              </Link>
-              <Link
-                className={cls(
-                  `mr-5`,
-                  showStickyMenu
-                    ? "text-slate-600 hover:text-primary"
-                    : "text-white hover:text-zinc-300"
-                )}
-                href={"/"}
-              >
-                کافی شاپ
-              </Link>
-              <Link
-                className={cls(
-                  `mr-5`,
-                  showStickyMenu
-                    ? "text-slate-600 hover:text-primary"
-                    : "text-white hover:text-zinc-300"
-                )}
-                href={"/"}
-              >
-                درباره ما
-              </Link>
+              {links.map(({ href, name }) => (
+                <Link
+                  key={name}
+                  className={cls(
+                    `mr-5`,
+                    showStickyMenu
+                      ? "text-slate-600 hover:text-primary"
+                      : "text-white hover:text-zinc-300"
+                  )}
+                  href={href}
+                >
+                  {name}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
