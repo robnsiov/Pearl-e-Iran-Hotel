@@ -19,6 +19,7 @@
     "react-countup": "^6.4.2",
     "react-dom": "latest",
     "react-multi-date-picker": "^4.3.1",
+    "react-paginate": "^8.2.0",
     "react-visibility-sensor": "^5.1.1",
     "vidstack": "^0.6.13"
   },
