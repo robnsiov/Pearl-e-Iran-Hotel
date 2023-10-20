@@ -1,32 +1,22 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import cls from "classnames";
 import { HambergerMenu } from "iconsax-react";
+import useMenu from "./use";
 
 const Menu = () => {
-  const [showStickyMenu, setShowStickyMenu] = useState(false);
-  const [toggleMenu, setToggleMenu] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 90) setShowStickyMenu(true);
-      else setShowStickyMenu(false);
-    };
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+  const { setToggleMenu, showStickyMenu, toggleMenu, dashboardPage } =
+    useMenu();
   return (
     <>
       <div
         className={cls(
-          `inset-0 bottom-auto flex items-center justify-center z-[999] transition-all box-border border-b-[1px]`,
+          `inset-0 bottom-auto flex items-center justify-center z-[999] box-border border-b-[1px]`,
           showStickyMenu
             ? "fixed bg-white border-black/10"
-            : "absolute border-transparent"
+            : "absolute border-transparent",
+          { "bg-primary": dashboardPage }
         )}
       >
         <div className="container md:!px-0 relative">
@@ -74,12 +64,21 @@ const Menu = () => {
             >
               خانه
             </Link>
+            <Link
+              className={cls(
+                `pr-3  pt-1 pb-2 border-b-[1px] border-black/10 w-full`,
+                showStickyMenu ? "text-slate-600" : "text-zinc-500"
+              )}
+              href={"/"}
+            >
+              خانه
+            </Link>
           </div>
           <div
-            className="flex justify-between 
+            className="flex justify-between
         items-center border-b-[1px] border-white/20 py-5 md:px-3"
           >
-            <div className="ml-3 relative">
+            <Link href={"/"} className="ml-3 relative">
               <Image
                 src={
                   showStickyMenu
@@ -90,7 +89,7 @@ const Menu = () => {
                 height={50}
                 alt="logo"
               />
-            </div>
+            </Link>
             <HambergerMenu
               onClick={() => setToggleMenu(!toggleMenu)}
               className={cls(
