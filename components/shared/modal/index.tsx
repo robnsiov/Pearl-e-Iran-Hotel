@@ -10,7 +10,7 @@ const Modal = ({ children, open, setOpen, className = "" }: ModalImpl) => {
     <>
       <div
         className={cls(
-          `fixed inset-0 z-40 bg-black/50 backdrop-blur-md transition-all duration-300 flex justify-center items-center`,
+          `fixed inset-0 z-[9999] bg-black/50 backdrop-blur-md transition-all duration-300 flex justify-center items-center`,
           open ? "opacity-100 visible" : "opacity-0 invisible"
         )}
       >
