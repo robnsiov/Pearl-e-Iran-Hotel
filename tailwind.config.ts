@@ -15,6 +15,7 @@ const config: Config = {
       sm: { max: "639px" },
       "991px": { max: "991px" },
       "520px": { max: "520px" },
+      "350px": { max: "350px" },
     },
     extend: {
       backgroundImage: {
