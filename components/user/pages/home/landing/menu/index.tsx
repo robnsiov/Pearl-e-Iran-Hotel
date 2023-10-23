@@ -27,6 +27,10 @@ const links = [
     href: "/blogs",
   },
   {
+    name: "سوالات متدوال",
+    href: "/faq",
+  },
+  {
     name: "درباره ما",
     href: "/about-us",
   },
